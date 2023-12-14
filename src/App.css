@@ -1,0 +1,90 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.container {
+  @apply flex font-sans text-base h-screen bg-gray-300;
+}
+
+.navbar {
+  @apply m-auto p-4 bg-white rounded shadow-md;
+}
+
+.nav-links {
+  @apply flex gap-8;
+}
+
+.nav-link,
+.drop-down li {
+  @apply list-none h-full py-2 px-4 font-semibold cursor-pointer;
+}
+
+a {
+  @apply no-underline text-current;
+}
+
+.drop-down {
+  @apply absolute hidden p-2 mt-1 bg-antiquewhite text-black rounded text-xs;
+}
+
+.nav-link:hover {
+  @apply bg-black text-white rounded;
+}
+
+.services:hover .drop-down {
+  @apply block;
+}
+
+.services a {
+  @apply flex items-center;
+}
+
+.dropdown-icon {
+  @apply text-lg relative right-[-5px] transition-transform ease-in-out duration-300;
+}
+
+.services:hover .dropdown-icon {
+  @apply rotate-180;
+}
+
+.drop-down li:hover {
+  @apply bg-black text-white rounded;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.active {
+  opacity: 1;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
